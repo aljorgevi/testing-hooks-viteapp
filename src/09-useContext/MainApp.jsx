@@ -6,27 +6,24 @@ import { AboutPage } from './AboutPage';
 import { LoginPage } from './LoginPage';
 import { Navbar } from './Navbar';
 
-
 export const MainApp = () => {
-  return (
-    <UserProvider>
-        {/* <h1>MainApp</h1> */}
-        {/* <Link to="/">Home</Link>
+	return (
+		<UserProvider>
+			{/* <h1>MainApp</h1> */}
+			{/* <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/login">Login</Link> */}
-        <Navbar />
-        <hr />
+			<Navbar />
+			<hr />
 
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+				<Route path='about' element={<AboutPage />} />
+				<Route path='login' element={<LoginPage />} />
 
-        <Routes>
-          <Route path="/" element={ <HomePage /> } />
-          <Route path="about" element={ <AboutPage /> } />
-          <Route path="login" element={ <LoginPage /> } />
-
-          {/* <Route path="/*" element={ <LoginPage /> } /> */}
-          <Route path="/*" element={ <Navigate to="/about" /> } />
-
-        </Routes>
-    </UserProvider>
-  )
-}
+				{/* <Route path="/*" element={ <LoginPage /> } /> */}
+				<Route path='/*' element={<Navigate to='/about' />} />
+			</Routes>
+		</UserProvider>
+	);
+};
