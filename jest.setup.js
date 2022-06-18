@@ -1,0 +1,2 @@
+// FetchAPI
+import 'whatwg-fetch'; //
